@@ -1,0 +1,25 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: kongx
+  Date: 2018/3/7 0007
+  Time: 11:13
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page import="java.util.*" contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+    <h1 align="center">Beer Recommendations JSP</h1>
+    <p>
+        <%
+            List styles = (List)resquest.getAttribute("styles");
+            Iterator it = styles.iterator();
+            while (it.hasNext()) {
+                out.print("<br>try: "+ it.next());
+            }
+        %>
+    </p>
+</body>
+</html>
